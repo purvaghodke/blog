@@ -1,0 +1,22 @@
+{
+	"variables": [],
+	"info": {
+		"name": "User Login",
+		"_postman_id": "33e5a658-77de-ea5a-07ba-5be1921004f4",
+		"description": "User Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login request",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "login request"
+			},
+			"response": []
+		}
+	]
+}
