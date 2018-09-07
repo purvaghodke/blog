@@ -1,9 +1,50 @@
 {
-	"name": "User Registration",
-	"description": "Register New user",
-	"id": "e4df61eb-32f8-6d08-a25d-768e6eb4e9ca",
-	"order": [],
-	"timestamp": 1536308850691,
-	"owner": 0,
-	"requests": []
+	"variables": [],
+	"info": {
+		"name": "User Registration",
+		"_postman_id": "e4df61eb-32f8-6d08-a25d-768e6eb4e9ca",
+		"description": "Register New user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user registration",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "purva",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "purvag2@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "rohit",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "user registration"
+			},
+			"response": []
+		}
+	]
 }

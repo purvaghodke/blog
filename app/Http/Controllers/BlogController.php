@@ -20,7 +20,7 @@ class BlogController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  
         return BlogResource::collection(Blog::all());
     }
 
@@ -61,7 +61,7 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-      if ($request->user()->id !== $blog->user_id) {
+      if (auth()->user()->id !== $blog->user_id) {
         return response()->json(['error' => 'You can only edit your own Blogs.'], 403);
       }
 
@@ -76,8 +76,12 @@ class BlogController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Blog $blog)
+    public function destroy(Request $request,Blog $blog)
     {
+        if (auth()->user()->id !== $blog->user_id) {
+        return response()->json(['error' => 'You can only delete your own Blogs.'], 403);
+      }
+
       $blog->delete();
 
       return response()->json(null, 204);
