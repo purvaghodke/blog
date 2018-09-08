@@ -8,17 +8,6 @@
 	},
 	"item": [
 		{
-			"name": "blog display",
-			"request": {
-				"url": "",
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"description": "blog display"
-			},
-			"response": []
-		},
-		{
 			"name": "blog create",
 			"request": {
 				"url": {
@@ -160,6 +149,28 @@
 					]
 				},
 				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "blog display",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/blogs/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjM5MjEzMCwiZXhwIjoxNTM2Mzk1NzMwLCJuYmYiOjE1MzYzOTIxMzAsImp0aSI6IjBuOUdaTXhybTh4NGxtZjciLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.q0z-NlMW-FN_nvO5-T7zgnxh9gwlmLXgNVxwXfCA8Zk",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "blog display"
 			},
 			"response": []
 		}

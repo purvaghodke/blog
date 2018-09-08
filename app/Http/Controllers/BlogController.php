@@ -49,7 +49,6 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-         //echo "<pre>";Blog::find(1);die;
          return new BlogResource($blog);
     }
 
