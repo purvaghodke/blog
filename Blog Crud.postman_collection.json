@@ -1,0 +1,167 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Blog Crud",
+		"_postman_id": "c317c95a-0f33-4dec-30d4-628457f40ac1",
+		"description": "Blog Crud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "blog display",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "blog display"
+			},
+			"response": []
+		},
+		{
+			"name": "blog create",
+			"request": {
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/blogs",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"blogs"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjMxNzI3NiwiZXhwIjoxNTM2MzIwODc2LCJuYmYiOjE1MzYzMTcyNzYsImp0aSI6Ikg4T2dkYkZZb0NGRXdTeXgiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.24LGT_ImKDyYT531DfGm0pIzTE_e4N5IJ9iXUjwqVGE",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"equals": false,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjMxODA3MiwiZXhwIjoxNTM2MzIxNjcyLCJuYmYiOjE1MzYzMTgwNzIsImp0aSI6IkFXOWYxbE5mam1zbWI0Q3ciLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.qI9yh3NSG88-Bes6ZTUSDqh8JiyUOEkClQek-LJTQqA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "My First Blog",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "Welcome to my blog",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "blog create"
+			},
+			"response": []
+		},
+		{
+			"name": "update blog",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/blogs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjMyMDMxNiwiZXhwIjoxNTM2MzIzOTE2LCJuYmYiOjE1MzYzMjAzMTYsImp0aSI6IjR4OGVkNGRPVG5tcVIzTkEiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.tA-tVTxlNBrNaq6nfLhfusCjvhTpqHNqsUe7FR9trl4",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "body",
+							"value": "My FIRST blog",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Blog",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/blogs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjMyMTY1OCwiZXhwIjoxNTM2MzI1MjU4LCJuYmYiOjE1MzYzMjE2NTgsImp0aSI6IlRnRVVJNzdwYTVjVW9IZkEiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.LskOeZlykepo2_VdRPYC6S2Yeh811YzLAwGwq8XS9H8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

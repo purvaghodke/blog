@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use Illuminate\Http\Request;
-use App\Http\Resources\BookResource;
+use App\Http\Resources\BlogResource;
 
 
 class BlogController extends Controller
@@ -49,6 +49,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
+         //echo "<pre>";Blog::find(1);die;
          return new BlogResource($blog);
     }
 
@@ -62,7 +63,7 @@ class BlogController extends Controller
     public function update(Request $request, Blog $blog)
     {
       if (auth()->user()->id !== $blog->user_id) {
-        return response()->json(['error' => 'You can only edit your own Blogs.'], 403);
+        return Response()->json(['error' => 'You can only edit your own Blogs.'], 403);
       }
 
       $blog->update($request->only(['title', 'body']));
@@ -85,5 +86,6 @@ class BlogController extends Controller
       $blog->delete();
 
       return response()->json(null, 204);
+  
     }
 }
