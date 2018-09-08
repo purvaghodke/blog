@@ -77,82 +77,6 @@
 			"response": []
 		},
 		{
-			"name": "update blog",
-			"request": {
-				"url": "http://127.0.0.1:8000/api/blogs",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjMyMDMxNiwiZXhwIjoxNTM2MzIzOTE2LCJuYmYiOjE1MzYzMjAzMTYsImp0aSI6IjR4OGVkNGRPVG5tcVIzTkEiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.tA-tVTxlNBrNaq6nfLhfusCjvhTpqHNqsUe7FR9trl4",
-						"description": ""
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"description": "",
-						"disabled": true
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "body",
-							"value": "My FIRST blog",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "id",
-							"value": "1",
-							"description": "",
-							"type": "text"
-						}
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Blog",
-			"request": {
-				"url": "http://127.0.0.1:8000/api/blogs",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjMyMTY1OCwiZXhwIjoxNTM2MzI1MjU4LCJuYmYiOjE1MzYzMjE2NTgsImp0aSI6IlRnRVVJNzdwYTVjVW9IZkEiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.LskOeZlykepo2_VdRPYC6S2Yeh811YzLAwGwq8XS9H8",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "id",
-							"value": "1",
-							"description": "",
-							"type": "text"
-						}
-					]
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
 			"name": "blog display",
 			"request": {
 				"url": "http://127.0.0.1:8000/api/blogs/1",
@@ -171,6 +95,68 @@
 				],
 				"body": {},
 				"description": "blog display"
+			},
+			"response": []
+		},
+		{
+			"name": "update blog",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/blogs/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjM5NDAyNywiZXhwIjoxNTM2Mzk3NjI3LCJuYmYiOjE1MzYzOTQwMjcsImp0aSI6Ik9BNEJKY1FYZzVEV1c5RzEiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.DemSwyCXU_2wy9wpmdfmQYqClk3WfZ0I6ZQTFH_9rU0",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":1,\"title\":\"My Blog\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Blog",
+			"request": {
+				"url": "http://127.0.0.1:8000/api/blogs/4",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTUzNjM5NjIzMywiZXhwIjoxNTM2Mzk5ODMzLCJuYmYiOjE1MzYzOTYyMzMsImp0aSI6Ind4MnA2OVg2U1NMcHkyY0EiLCJzdWIiOjIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.Q_sYkg_4LfBQws2tQ2s9psTfS30UCTB-m724VmZ9_eY",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
 			},
 			"response": []
 		}
